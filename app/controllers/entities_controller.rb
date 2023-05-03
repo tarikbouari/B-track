@@ -1,34 +1,40 @@
 class EntitiesController < ApplicationController
-  before_action :set_entity, only: %i[show edit update destroy]
+  before_action :set_group, only: %i[index create new]
   
   def index
-    @entities = Entity.find(params[:id])
+    @group = Group.find(params[:group_id])
+    @entities = @group.entities.order('created_at DESC')
+    
   end
 
   def new
-    @groups = Group.find(params[:id])
     @new_entity = Entity.new
-    
-    @expense = @entity.expenses.build
+    @group = Group.find(params[:group_id])
   end
+
   def create
-    @entity = Entity.new(entity_params)
-    respond_to do |format|
-      if @entity.save
-        format.html { redirect_to group_path(@entity.expenses[0].group_id), notice: 'Entity was successfully created.' }
-        format.json { render :show, status: :created, location: @entity }
-      end
-    end
+   @entity = Entity.new(author_id: current_user.id, **entity_params)
+
+   if @entity.save
+    Expense.create!(group_id: @group.id, entity_id: @entity.id)
+    flash[:notice] = 'Transaction recorded successfully'
+    redirect_to group_entities_path(@group)
+   else
+    flash.now[:alert] = 'Transaction could not be saved'
+    render :new, status: :unprocessable_entity
+   end
   end
 
   private
 
-   # Use callbacks to share common setup or constraints between actions.
-   def set_entity
-    @entity = Entity.find(params[:id])
+
+   #Use callbacks to share common setup or constraints between actions.
+  
+  def set_group
+    @group = Group.find(params[:group_id])
   end
 
   def entity_params
-    params.require(:entity).permit(:name, :icon, :amount, expenses_attributes: [:group_id])
+    params.require(:entity).permit(:name, :amount)
   end
 end
