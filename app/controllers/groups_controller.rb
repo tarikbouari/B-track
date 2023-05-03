@@ -4,22 +4,19 @@ class GroupsController < ApplicationController
     @groups = Group.all.where(user_id: current_user.id)
   end
 
-  def show 
-   
-  end
+  def show; end
 
-  def new 
+  def new
     @new_group = Group.new
   end
 
-
- # create a new group in the html and json format
+  # create a new group in the html and json format
   def create
     @group = Group.new(group_parms)
-    respond_to  do |format|
+    respond_to do |format|
       if @group.save
         format.html { redirect_to groups_path, notice: 'Group was successfully created.' }
-        format.json { render :show, status: :created, location: @group}
+        format.json { render :show, status: :created, location: @group }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @group.errors, status: :unprocessable_entity }
@@ -29,10 +26,10 @@ class GroupsController < ApplicationController
 
   private
 
-   def group_parms
+  def group_parms
     params.require(:group).permit(:name, :icon).merge(user_id: current_user.id)
   end
-  
+
   def set_author
     @author = current_user
   end
@@ -40,5 +37,4 @@ class GroupsController < ApplicationController
   def current_group
     @group = Group.find(params[:id])
   end
-
 end

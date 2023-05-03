@@ -8,7 +8,7 @@ class Group < ApplicationRecord
   has_many :entities, through: :expenses, dependent: :destroy
 
   def total_amount
-    total =0;
+    total = 0
     entities.each do |entity|
       total += entity.amount
     end
