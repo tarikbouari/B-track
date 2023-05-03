@@ -17,11 +17,12 @@ Rails.application.routes.draw do
   end
   
 
-  resources :users do
-    resources :groups do 
-      resources :entities 
-      resources :expenses
+  resources :users 
+  resources :groups do 
+    resources :entities do
+      resource :expenses
     end
   end
+
   resources :home
 end

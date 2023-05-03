@@ -1,0 +1,29 @@
+<section class="container-fluid px-0 text-center ">
+<div class="head-category text-center d-flex justify-content-between ">
+<span class="text-white"> ADD CATEGORIES</span>
+<%= link_to "back", groups_path,  class: "text-white " %>
+</div>
+<div class="container  d-flex  flex-column py-5">
+
+ <div class="border border-3 p-3 ">
+ <%= form_with model:@new_group, url: groups_path do |form| %>
+    <div class="mb-3  d-flex flex-column ">
+    <label class ="form-label">name</label>
+    <%= form.text_field :name %>
+    </div>
+
+    
+    <div class="mb-3  d-flex flex-column ">
+    <label class="form-label"> icon</label>
+    <%= form.text_field :icon %>
+    </div>
+
+    <div>
+    <%= form.submit 'Add Category', class: 'btn btn-gradient btn-primary block' %>
+    </div>
+
+    <%end%>
+ </div>
+ 
+</div>
+</section>

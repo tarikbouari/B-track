@@ -34,6 +34,10 @@ gem 'jbuilder'
 
 gem 'devise'
 
+gem 'figaro'
+
+gem 'rspec-rails'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
