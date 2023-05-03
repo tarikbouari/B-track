@@ -4,6 +4,7 @@ a {
 
 body {
     background-color: #f8f9fa;
+    font-family: 'Roboto New, Courier, monospace';
 }
 .ctn-session {
   width: 100%;
@@ -101,10 +102,24 @@ a svg {
 
 .head-category {
     background-color: #3778c2;
-    padding: 1rem;
-    margin-bottom: 2rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .ctn-group {
     gap:1rem !important;
+}
+
+.div-image {
+  width: 30%; 
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.amount {
+  font-size: larger;
+  font-weight: 400;
 }

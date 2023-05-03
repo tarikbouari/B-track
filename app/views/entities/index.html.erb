@@ -4,33 +4,21 @@
         <%= link_to "back", groups_path,  class: "text-white " %>
   
     </div>
-    <div class="mb-3">
-        <h2><%= @group.name %></h2>
+    <div class="mb-3 d-flex justify-content-between p-3 bg-white">
+        <h3><%= @group.name %></h3>
         <span class="total-amount-header"> $<%= @group.total_amount %></span>
     </div>
     <div class="container d-flex flex-column px-3 ctn-group">
         <% if @entities.empty?%>
             <span> There is no transaction. Create one</span>
         <% else%>
-        <% @entities.each do |transaction|  %>
-            
+        <% @entities.each do |transaction|  %>          
             <div class="d-flex align-items-center justify-content-between g-5 p-3 bg-white text-dark">
-
-             
-
                 <span> <%= transaction.name %></span>
-            
-                
-
-
-                    <span> <%= transaction.amount %></span>
-            
-            
+                 <span> $<%= transaction.amount %></span>
             </div>
-      
         <%end%>
-        <%end%>      
-          
+        <%end%>              
     </div>
     <%= link_to "New transaction",  new_group_entity_path(@group.id), class: "new-group my-3 btn btn-primary sm"  %>
   

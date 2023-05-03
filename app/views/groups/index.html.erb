@@ -1,7 +1,7 @@
 <section class="container-fluid px-0 text-center">
     <div class="head-category text-center d-flex justify-content-between ">
         <span class="text-white"> CATEGORIES</span>
-        <%= button_to "Sign out", destroy_user_session_path, method: :delete, data: {turbo: false},  class: "log-out-button " %>
+        <%= button_to "Sign out", destroy_user_session_path, method: :delete, data: {turbo: false},  class: " btn btn-light btn-sm  " %>
     </div>
     <div class="container d-flex flex-column px-3 ctn-group">
         <% if @groups.empty?%>
@@ -9,20 +9,19 @@
         <% else%>
         <% @groups.each do |category|  %>
             <%= link_to group_entities_path(category.id) do %>
-            <div class="d-flex align-items-center justify-content-between g-5 p-3 bg-white text-dark">
+            <div class="d-flex align-items-center justify-content-between p-3 bg-white text-dark">
             
-                    <div>
-                    <%= category.icon %>
-
+                    <div class="div-image">
+                    <img src="<%= category.icon %>"  class= 'img'>
                     </div>
                      
-                    <div class="d-flex, flex-colum gap-3">
+                    <div class="d-flex flex-column  align-items-start  gap-3 ">
                     <span> <%= category.name %></span>
-                    <span> <%= category.format_date(category.created_at) %></span>
+                    <span> <%= category.created_at.strftime("%d %b %y") %></span>
 
                     </div>
 
-                    <span> <%= category.total_amount %></span>
+                    <span class="amount"> $ <%= category.total_amount %></span>
             
             
             </div>
