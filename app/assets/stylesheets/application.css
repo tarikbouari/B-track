@@ -23,12 +23,6 @@ body {
   flex-direction: column;
 }
 
-.ctn-image {
-  /* position:relative !important;
-    left: 30% !important;
-    top: 40%; */
-}
-
 .ctn-login a:first-child {
   padding: 0.5rem 6rem;
   background-color: #3878c2;
