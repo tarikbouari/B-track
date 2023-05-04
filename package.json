@@ -8,6 +8,6 @@
     "stylelint-scss": "^3.21.0"
   },
    "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds"
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds",
   }
 }
