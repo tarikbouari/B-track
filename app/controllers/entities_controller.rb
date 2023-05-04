@@ -14,14 +14,13 @@ class EntitiesController < ApplicationController
   def create
     @entity = Entity.new(author_id: current_user.id, **entity_params)
 
-    if @entity.save
-      Expense.create!(group_id: @group.id, entity_id: @entity.id)
-      flash[:notice] = 'Transaction recorded successfully'
-      redirect_to group_entities_path(@group)
-    else
-      flash.now[:alert] = 'Transaction could not be saved'
-      render :new, status: :unprocessable_entity
-    end
+      if @entity.save
+        Expense.create!(group_id: @group.id, entity_id: @entity.id)
+       redirect_to group_entities_path(@group)
+      else
+        flash.now[:alert] = 'Transaction could not be saved'
+        render :new, status: :unprocessable_entity
+      end
   end
 
   private
@@ -35,4 +34,5 @@ class EntitiesController < ApplicationController
   def entity_params
     params.require(:entity).permit(:name, :amount)
   end
+
 end
