@@ -38,8 +38,6 @@ gem 'figaro'
 
 gem 'rspec-rails'
 
-gem 'socket' 
-
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
