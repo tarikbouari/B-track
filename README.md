@@ -74,7 +74,7 @@
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://moyin.onrender.com/groups)
+- [Live Demo Link](https://rails-t4pm.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -177,6 +177,16 @@ I would like to thank...
 - [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ❓ FAQ <a name="faq"></a>
+
+- **Can I fork and reuse the repository**
+
+  - Yes please, feel free.
+
+- **Can I improve the repository, and my changes will be accepted if they are good?**
+
+  - Yes please, nice ideas are welcome, please.
 
 <!-- LICENSE -->
 
