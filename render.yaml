@@ -1,11 +1,11 @@
 databases:
-  - name: mysite
-    databaseName: mysite
-    user: mysite
+  - name: bdata
+    databaseName: range_7vei
+    user: range_7vei_user
 
 services:
   - type: web
-    name: mysite
+    name: rails
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
