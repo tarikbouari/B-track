@@ -51,7 +51,7 @@
     <li>Ruby on Rails</li>
   </ul>
 </details>
-<summary>Database(postgres)</summary>
+<summary>Database</summary>
   <ul>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
@@ -74,7 +74,7 @@
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://google.com)
+- [Live Demo Link](https://moyin.onrender.com/groups)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
