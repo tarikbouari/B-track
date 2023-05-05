@@ -34,7 +34,7 @@ gem 'jbuilder'
 
 gem 'devise'
 
-gem 'figaro'
+# gem 'figaro'
 
 gem 'rspec-rails'
 
