@@ -16,6 +16,7 @@ class EntitiesController < ApplicationController
 
     if @entity.save
       Expense.create!(group_id: @group.id, entity_id: @entity.id)
+      flash[:notice] = 'Transaction recorded successfully'
       redirect_to group_entities_path(@group)
     else
       flash.now[:alert] = 'Transaction could not be saved'
