@@ -119,7 +119,7 @@ To run tests, run the following command:
 
 👤 **Tarik Bouari**
 
-GitHub: [@tarikbouari](https://github.com/tarikbouari)
+- GitHub: [@tarikbouari](https://github.com/tarikbouari)
 - Twitter: [@tarikbouari](https://twitter.com/tarikbouari)
 - LinkedIn: [tarikbouari](https://linkedin.com/tarikbouari)
 
@@ -136,9 +136,7 @@ Feel free to check the [issues page](../../issues/).
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- SUPPORT -->
-
 ## ⭐️ Show your support <a name="support"></a>
-
 If you like this project give it a star
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
