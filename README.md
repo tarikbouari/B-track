@@ -26,9 +26,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [B-tracker] <a name="about-project"></a>
+# 📖 B-tracker <a name="about-project"></a>
 
-**[B-traker]** is a mobile application to track daily expenses,. Users have a list of transactions associated with a category that allow them to see the amount of money they've spent and on what.
+**B-traker** is a mobile application to track daily expenses,. Users have a list of transactions associated with a category that allow them to see the amount of money they've spent and on what.
 
 ## 🛠 Built With <a name="built-with"></a>
 
