@@ -29,13 +29,12 @@
 
 # 📖 [B-tracker] <a name="about-project"></a>
 
-**[B-traker]** is a mobile application to track daily expenses,. Users have a list of transactions associated with a category that allow them to see the amount of money they've have spent and on what.
+**[B-traker]** is a mobile application to track daily expenses,. Users have a list of transactions associated with a category that allow them to see the amount of money they've spent and on what.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
@@ -65,47 +64,31 @@
 
 - **[Match table and column names to the ERD diagram.]**
 
-
+![er-diagram](https://github.com/microverseinc/curriculum-rails/raw/main/capstone/images/erd_diagram.png)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
 - [Live Demo Link](https://rails-t4pm.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-## Entity Relationship Diagram <a name="er-diagram"></a>
-![er-diagram](https://github.com/microverseinc/curriculum-rails/raw/main/capstone/images/erd_diagram.png)
-
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
   In order to run this project you need:
 
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
-
 ### Setup
 
 Clone this repository to your desired folder:
 
-`git clone https://github.com/tarikbouari/Recipe_app.git`
+`git clone git@github.com:tarikbouari/B-track.git
 
 ### Install
 
@@ -135,8 +118,6 @@ To run tests, run the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Tarik Bouari**
 
 GitHub: [@tarikbouari](https://github.com/tarikbouari)
@@ -159,17 +140,13 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+If you like this project give it a star
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
 
 I would like to thank...
 - [Microverse](https://microverse.org)
