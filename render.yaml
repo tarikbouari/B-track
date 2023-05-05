@@ -1,7 +1,7 @@
 databases:
-  - name: bdata
-    databaseName: range_7vei
-    user: range_7vei_user
+  - name: budget
+    databaseName: budget_track
+    user: budget
 
 services:
   - type: web
