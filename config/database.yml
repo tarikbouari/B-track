@@ -84,6 +84,5 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  database: Budget_track_production
-  username: Budget_track
-  password: <%= ENV["BUDGET_TRACK_DATABASE_PASSWORD"] %>
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %
