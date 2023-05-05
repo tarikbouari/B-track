@@ -1,18 +1,50 @@
+# databases:
+#   - name: budgetdata
+#     databaseName: budgetdata
+#     user: budgetdata_user
+
+# services:
+  # - type: web
+  #   name: webtracker
+  #   env: ruby
+  #   buildCommand: "./bin/render-build.sh"
+  #   startCommand: "bundle exec puma -C config/puma.rb"
+  #   envVars:
+  #     - key: DATABASE_URL
+  #       fromDatabase:
+  #         name: budgetdata
+  #         property: connectionString
+  #     - key: RAILS_MASTER_KEY
+  #       sync: false
+
+- key: DATABASE_URL
+       fromDatabase: 
+         name: tarik
+         property: connectionString
+  - type: redis
+    name: redis
+    ipAllowList: []
+    plan: free
+    maxmemoryPolicy: noeviction
 databases:
-  - name: budgetdata
-    databaseName: budgetdata
-    user: budgetdata_user
+  - name: tarik
+    ipAllowList: []
 
 services:
   - type: web
-    name: tracker
+    name: webtracker
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
-      - key: DATABASE_URL
-        fromDatabase:
-          name: budgetdata
-          property: connectionString
-      - key: RAILS_MASTER_KEY
-        sync: false
+     - key: RAILS_MASTER_KEY
+       sync: false
+     - key: DATABASE_URL
+       fromDatabase: 
+         name: postgres
+         property: connectionString
+  - type: redis
+    name: redis
+    ipAllowList: []
+    plan: free
+    maxmemoryPolicy: noeviction
