@@ -117,3 +117,18 @@ a svg {
   font-size: larger;
   font-weight: 400;
 }
+
+.img-cart {
+  width: 65%;
+  height: auto;
+}
+
+.img-city {
+  margin-top: 12rem !important;
+  width: 100%;
+  height: auto;
+}
+
+.fg {
+  color: #000;
+}
