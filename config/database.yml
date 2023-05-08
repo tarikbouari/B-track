@@ -12,8 +12,7 @@
 #       Install PostgreSQL and put its /bin directory on your path.
 #
 # Configure Using Gemfile
-# gem "pg"
-#
+# gem 'pg'
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -25,13 +24,12 @@ development:
   <<: *default
   database: Budget_track_development
   username: postgres
-  password: <%= ENV["MY_DB_PASSWORD"] %>
-
+  password: '12345678'
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: Budget_track
+  #username: recipe
 
   # The password associated with the postgres role (username).
   #password:
@@ -58,11 +56,10 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
   database: Budget_track_test
   username: postgres
-  password: <%= ENV["MY_DB_PASSWORD"] %>
-
+  password: '12345678'
+  
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
@@ -82,9 +79,6 @@ test:
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
-#
 production:
   <<: *default
-  database: Budget_track_production
-  username: Budget_track
-  password: <%= ENV["BUDGET_TRACK_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
