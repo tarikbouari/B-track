@@ -4,6 +4,7 @@ a {
 
 body {
   background-color: #f8f9fa;
+  font-family: 'poppins';
 }
 
 .ctn-session {
@@ -59,19 +60,20 @@ body {
 
 .field {
   display: flex;
-  justify-content: space-between;
-  background-color: #fff;
-  padding: 0.5rem 1rem;
+  flex-direction: column;
+  gap:0.5rem;
+  padding: 0.5rem 2rem;
 }
 
 .field input {
-  border: none;
-  width: 60%;
+  border: #626060;
+  border-radius: 0.5rem;
+  padding: 0.3rem  0.5rem;
+  width: 100%;
 }
 
 .field input:focus {
-  border: #3778c2;
-  border: 1px solid #3778c2;
+  border: 1px solid #ca1980;
 }
 
 a svg {
@@ -85,13 +87,15 @@ a svg {
 }
 
 .ac-btn {
-  position: absolute;
+  
   background: #3778c2;
-  top: -4.2rem;
+
   color: #fff;
   border: none;
-  right: 2rem;
-  margin-top: 0.5rem;
+ width: 85%;
+ position: relative;
+ top: 2rem;
+
 }
 
 .head-category {
@@ -116,4 +120,19 @@ a svg {
 .amount {
   font-size: larger;
   font-weight: 400;
+}
+
+.img-cart {
+  width: 65%;
+  height: auto;
+}
+
+.img-city {
+  padding-top: 1rem !important;
+  width: 100%;
+  height: auto;
+}
+
+.fg {
+  color: #000;
 }
